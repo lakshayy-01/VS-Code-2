@@ -3,39 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfilio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <style>
+        header{
+            background-color: rgb(236, 126, 126);
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navhead{
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+
+        }
+        .navbar{
+            color: white;
+            font-size: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .navlink a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            margin-left: 200px;
+        }
+        html{
+            background-image: linear-gradient(to right, #fd1d52, #0a1f5f);
+        }
+        #dis{
+            margin-top: 220px;
+        }
+        #userimg{
+            margin-top: -300px;
+        }
+        .txt{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        #btn{
+            border-radius: 20px; border: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+             padding: 15px 32px; 
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1 id="port">My Portfilio  <nav id="nav">
-                <a href="my portfilio.html">Home</a>
-                <a href="my portfilio.html">About</a>
-                <a href="my portfilio.html">Project</a>
-                <a href="my portfilio.html">Contact</a>
-            </nav></h1> 
-        
-        
-            
-
-
-            
-        
-
-        <section>
-            <h1 id="intro">Hi I'm <span id="unk">Lakshay</span></h1>
+            <nav class="navhead">
+                <div class="navbar">My Portfolio</div>
+                <div class="navlink">
+                    <a href=#home > Home</a>
+                    <a href=#about > About</a>
+                    <a href=#projects > Project</a>
+                    <a href=#contact > Contact</a>
+                </div>
+            </nav>
+    </header>
+    <main >
+        <section id="dis">
+        <h1 class="txt">Hi I'am <span style="color: yellow;">Unknown </span> , </h1>
+        <p class="txt" style="color: white; font-size: x-large;"> A frontend developer exploring the world of design and open-source. 
+            <br>
+            Turning ideas into interactive, User-friendly web application
+        </p>
         </section>
 
-        <div>
-            <p>A Fronted Developer exploring the world of design and open -source. Turning </p> <p></p>ideas into interactive, user-friendly web applications</p>
-        </div>
-        
-       <P id="image"><img src="https://www.svgrepo.com/show/452030/avatar-default.svg" alt="svg Image" height="200px"> </P> 
+       <P  id="userimg"  style="text-align: end; padding-right: 50px;"> <img src="https://i.pinimg.com/1200x/68/0e/24/680e241336ae8d3a57a42f54b656e58f.jpg" height="400" ></P>
 
-       <div>
-        <button id="btn">View My Work</button>
-       </div>
-    </header>
-    
+       <button id="btn" style="color: white; background-color: rgb(64, 48, 189)  ;">Verify My Work</button>
+       <hr>
+
+       <br>
+       <section id="about">
+           <h2>About Me</h2>
+           <p>I am a passionate frontend developer with experience in creating responsive and user-friendly web applications. I specialize in HTML, CSS, and JavaScript.</p>
+           <hr>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Project 1: Portfolio Website</li>
+                <li>Project 2: Vedam</li>
+                <li>Project 3: aBC</li>
+            </ul>
+        </section>
+        <hr>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <a href="mailto:abc9@gmail.com">Email</a>
+            <br>
+            <a href="tel:+917777777777">Phone</a>
+        
+            
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
