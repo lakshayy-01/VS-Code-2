@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        #btn-event-helper {
+            height: 150px;
+            width: 150px;
+            border: 2px solid red;
+            margin: 20px;
+            background-color: white;
+        }
+
+        button {
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2> Events</h2>
+
+    <div id="btn-event-helper"></div>
+
+    <button id="btn-events">Change BG</button>
+    <h2>Keyboard Events</h2>
+    <input type="text" >
+<p></p>
+    <script>
+        let box = document.getElementById("btn-event-helper");
+        let btn = document.getElementById("btn-events");
+
+  
+        btn.addEventListener("click", function() {
+            box.style.backgroundColor = "lightcyan";
+        });
+
+        btn.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "lightblue";
+        });
+
+       
+        btn.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "white";
+        });
+
+        
+        btn.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            box.style.backgroundColor = "lightcoral";
+        });
+
+        btn.addEventListener("mousedown", function(event) {
+            if (event.button === 0) {
+                box.style.backgroundColor = "lightcyan";
+            }
+        });
+
+        btn.addEventListener("dblclick", function() {
+            box.style.backgroundColor = "lightgreen";
+        });
+
+
+        window.addEventListener("scroll", function() {
+            console.log("Page is scrolling!");
+            document.body.style.backgroundColor = "lightyellow";
+        });
+
+         let  input = document.querySelector("input")
+         let str="";
+
+         input.addEventListener("keydown",function(e){
+            console.log("even object",e.key);
+            let p= document.querySelector("p");
+            str = str+ e.key;
+            p.textContent= str;
+
+         })
+    
+
+    </script>
+
+</body>
+</html>

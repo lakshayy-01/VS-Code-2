@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080e1c">
+
+    <title>WanderWeather | Smart Travel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h2>🌍 WanderWeather</h2>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Explore the world.</h1>
+
+            <p>Your next adventure starts with the weather.</p>
+
+            <form id="searchForm">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter your city..."
+                    required
+                >
+
+                <button type="submit">Explore Weather →</button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="weather-section" id="weatherSection" hidden>
+            <h2>Live Weather</h2>
+
+            <div class="weather-card">
+
+                <div class="weather-location">
+                    <h3 id="weatherLocation">City, Country</h3>
+                    <p>Current Weather</p>
+                </div>
+
+                <div class="weather-main">
+                    <span id="weatherIcon">🌤️</span>
+                    <h1 id="temperature">--°C</h1>
+                    <p id="weatherDescription">Weather condition</p>
+                </div>
+
+                <div class="weather-details">
+
+                    <div class="weather-detail">
+                        <span>Feels Like</span>
+                        <h3 id="feelsLike">--°C</h3>
+                    </div>
+
+                    <div class="weather-detail">
+                        <span>Humidity</span>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+
+                    <div class="weather-detail">
+                        <span>Wind Speed</span>
+                        <h3 id="windSpeed">-- km/h</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section" id="forecastSection" hidden>
+            <h2>7-Day Forecast</h2>
+            <div class="forecast-grid" id="forecastGrid"></div>
+        </section>
+
+        <section class="recommendations-section" id="recommendationsSection" hidden>
+
+            <div class="recommendations-heading">
+                <h2>Explore Destinations</h2>
+                <p>Discover places with weather worth travelling for.</p>
+            </div>
+
+            <div class="recommendation-grid" id="recommendationGrid"></div>
+
+        </section>
+
+        <section class="budget-section" id="budgetSection">
+
+            <div class="budget-heading">
+                <h2>Plan Your Perfect Trip</h2>
+                <p>Set your budget and discover what your next adventure could cost.</p>
+            </div>
+
+            <form id="budgetForm">
+
+                <div class="budget-input-group">
+                    <label for="budgetDestination">Choose Destination</label>
+
+                    <select id="budgetDestination" required>
+                        <option value="">Select a destination</option>
+                        <option value="Manali">Manali</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Shimla">Shimla</option>
+                        <option value="Udaipur">Udaipur</option>
+                    </select>
+                </div>
+
+                <div class="budget-input-group">
+                    <label for="tripDays">Number of Days</label>
+
+                    <input
+                        type="number"
+                        id="tripDays"
+                        min="1"
+                        max="30"
+                        placeholder="Example: 3"
+                        required
+                    >
+                </div>
+
+                <div class="budget-input-group">
+                    <label for="tripBudget">Your Total Budget (₹)</label>
+
+                    <input
+                        type="number"
+                        id="tripBudget"
+                        min="1"
+                        placeholder="Example: 10000"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="budgetButton">
+                    Calculate My Trip →
+                </button>
+
+            </form>
+
+            <div id="budgetResult" hidden></div>
+            <p id="budgetMessage"></p>
+
+        </section>
+
+        <section class="ai-assistant-section">
+
+            <div class="ai-heading">
+                <span>✦ AI POWERED</span>
+                <h2>Your Personal Travel Assistant</h2>
+                <p>Ask anything about your next adventure.</p>
+            </div>
+
+            <div class="chat-container">
+
+                <div class="chat-header">
+
+                    <div class="ai-avatar">✦</div>
+
+                    <div>
+                        <h3>Wander AI</h3>
+                        <p>Your travel companion</p>
+                    </div>
+
+                    <span class="online-status">● Online</span>
+
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+
+                    <div class="assistant-message">
+                        Hey! 👋 I'm Wander AI.
+                        Where would you like to travel?
+                    </div>
+
+                </div>
+
+                <form id="chatForm">
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Ask me about travel..."
+                        required
+                    >
+
+                    <button type="submit">Send ➤</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
